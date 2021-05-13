@@ -4,8 +4,8 @@ programa
 	funcao inicio()
 	{
 		inteiro cont[5][5]={{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20},{21,22,23,24,25}}, mult,mult1
-		mult=0
-		mult1=0
+		mult=1
+		mult1=5
 
 		
 		
@@ -15,8 +15,9 @@ programa
 			{
 				se(j==i)
 				{
-					mult=cont[i][j] * cont[i+1][j+1] 
-					escreva(" ",mult)
+					mult = mult * cont[i+1][j+1] 
+					
+					escreva(mult," ")
 				}
 			}
 		}		
@@ -27,7 +28,7 @@ programa
 			{
 				se(i+j==4)
 				{
-					mult1 = cont[i][j]*cont[i+1][j-1]
+					mult1 = mult1*cont[i+1][j-1]
 					escreva(mult1," ")
 				}
 			}
@@ -45,7 +46,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 357; 
+ * @POSICAO-CURSOR = 321; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
