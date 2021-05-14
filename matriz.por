@@ -18,10 +18,11 @@ programa
 				se(j==i)
 				{
 					mult = mult * cont[i+1][j+1] 
-					escreva(mult," ")
+					
 				}
 			}
-		}		
+		}	
+		escreva(mult," ")	
 		escreva("\n")
 		
 		para (inteiro i=0;i<=5;i++)
@@ -31,31 +32,36 @@ programa
 				se(i+j==4)
 				{
 					mult1 = mult1*cont[i+1][j-1]
-					escreva(mult1," ")
+					
 				}
 			}
 		}
+		escreva(mult1," ")
 		escreva("\n")
 		
 	
 
 		para (inteiro l=0;l<5;l++)
 		{
+			para(inteiro c=0+aux1;c<5;c++)
+			{
+				aux = cont[c][l]
+				cont[c][l]=cont[l][c]
+				cont[l][c]=aux
+			}
+			aux1++
+			escreva("\n")
+		}
+		escreva("\n")
+		para (inteiro l=0;l<5;l++)
+		{
 			para(inteiro c=0;c<5;c++)
 			{
-				se (l!=c)
-				{
-					aux = cont[l][c]
-					cont[l][c]=cont[c][l]
-					cont[l][c]=aux
-					
-				}
-				
 				escreva(cont[l][c]," ")
 			}
 			escreva("\n")
 		}
-		/*para (inteiro l=0;l<5;l++)
+		para (inteiro l=0;l<5;l++)
 		{
 			para(inteiro c=0;c<5;c++)
 			{
@@ -69,7 +75,7 @@ programa
 			}
 			
 			escreva("\n")
-		}*/
+		}
 					
 					
 			
@@ -83,7 +89,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 755; 
+ * @POSICAO-CURSOR = 726; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
